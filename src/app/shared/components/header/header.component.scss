@@ -1,0 +1,39 @@
+.header-home {
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+
+    @media (max-width: 600px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .actions-header {
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header-home {
+    padding: 10px;
+  }
+}

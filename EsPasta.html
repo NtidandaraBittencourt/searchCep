@@ -1,0 +1,35 @@
+/src
+  /app
+    /services                    # Módulo Core (serviços globais)
+      services.module.ts
+      via-cep.service.ts       # Serviço para API ViaCEP
+    /shared                    # Módulo Shared (componentes reutilizáveis)
+      /components
+        header.component.ts    # Componente Header
+      /models
+        endereco.model.ts      # Model para CEP/Endereço
+    /components                  # Módulos de Funcionalidades
+      /cep
+        cep-routing.module
+        cep.module.ts    # Módulo de busca de CEP
+        busca-cep.component.ts # Componente de busca de CEP
+        lista-enderecos.component.ts # Componente de listagem de endereços
+      /home
+        home-routing.module
+        home.module.ts         # Módulo Home (Lazy Loaded)
+        home.component.ts      # Componente da página Home
+    app-routing.module.ts      # Roteamento principal
+    app.component.ts           # Componente principal
+    app.module.ts              # Módulo principal
+  /assets
+    /images
+      logo.svg                 # Logo SCCON (SVG)
+  /styles
+    styles.scss                # Estilos globais
+  /environments
+    environment.ts             # Arquivo de configuração de ambiente (desenvolvimento)
+    environment.prod.ts        # Arquivo de configuração de ambiente (produção)
+  index.html                   # Arquivo HTML principal
+
+
+como criar essa estrutura principalmente a busca-cep

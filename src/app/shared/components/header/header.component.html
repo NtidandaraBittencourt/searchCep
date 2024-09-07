@@ -1,0 +1,25 @@
+<mat-toolbar class="header-home">
+  <img src="assets/one.png" alt="Logo" class="logo" />
+  <div class="actions-header">
+    <button 
+      ariaLabel="Página inicial"
+      mat-raised-button
+      routerLink="/"
+    > 
+      Home 
+    </button>
+    
+    <button 
+      mat-raised-button
+      ariaLabel="Buscar endereço"
+      [matMenuTriggerFor]="menu">
+      Endereço
+    </button>
+
+    <!-- Definição do menu -->
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="'/busca-cep'">Buscar Endereço</button>
+    </mat-menu>
+    
+  </div>
+</mat-toolbar>
