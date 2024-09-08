@@ -11,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './components/home/home.module';
 import { CepModule } from './components/cep/cep.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,

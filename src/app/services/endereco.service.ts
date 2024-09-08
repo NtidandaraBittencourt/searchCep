@@ -3,6 +3,7 @@ import { Observable, Subject } from 'rxjs';
 import { BaseApiService } from './base-api.service';
 import { HttpClient } from '@angular/common/http';
 import { Endereco } from '../shared/models/endereco.model';
+import { SnackBarService } from './snack-bar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,11 @@ import { Endereco } from '../shared/models/endereco.model';
 export class EnderecoService extends BaseApiService {
   private enderecoAtualizado = new Subject<void>()
 
-  constructor(http: HttpClient) {
-    super(http, 'http://localhost:3000/enderecos');
+  constructor(
+    http: HttpClient,
+    snackService: SnackBarService
+  ) {
+    super(http, 'http://localhost:3000/enderecos', snackService);
   }
 
   salvarEndereco(endereco: Endereco): Observable<Endereco> {

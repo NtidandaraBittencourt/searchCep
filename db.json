@@ -65,20 +65,36 @@
       "siafi": "8233"
     },
     {
-      "id": "3bca",
-      "cep": "89160-222",
-      "logradouro": "Travessa Henrique Coninck",
+      "id": "6480",
+      "cep": "88090-527",
+      "logradouro": "Servidão das Seringueiras",
       "complemento": "",
       "unidade": "",
-      "bairro": "Jardim América",
-      "localidade": "Rio do Sul",
+      "bairro": "Monte Cristo",
+      "localidade": "Florianópolis",
       "uf": "SC",
       "estado": "Santa Catarina",
       "regiao": "Sul",
-      "ibge": "4214805",
+      "ibge": "4205407",
       "gia": "",
-      "ddd": "47",
-      "siafi": "8291"
+      "ddd": "48",
+      "siafi": "8105"
+    },
+    {
+      "id": "32ca",
+      "cep": "75132-140",
+      "logradouro": "Rua VP 7D",
+      "complemento": "",
+      "unidade": "",
+      "bairro": "Distrito Agroindustrial de Anápolis",
+      "localidade": "Anápolis",
+      "uf": "GO",
+      "estado": "Goiás",
+      "regiao": "Centro-Oeste",
+      "ibge": "5201108",
+      "gia": "",
+      "ddd": "62",
+      "siafi": "9221"
     }
   ]
 }
