@@ -1,0 +1,23 @@
+<div class="table-container">
+  <table mat-table [dataSource]="dataSource" class="table-content">
+    
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column">
+      <th mat-header-cell *matHeaderCellDef> {{ column | titlecase }} </th>
+      <td mat-cell *matCellDef="let element"> {{ element[column] || '-' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="warn" (click)="removerEndereco(element)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns.concat(['acoes'])"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns.concat(['acoes'])"></tr>
+  </table>
+
+  <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+</div>

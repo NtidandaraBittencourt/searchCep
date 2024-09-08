@@ -1,0 +1,12 @@
+.form-search {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 600px) {
+        display: block;
+      }
+
+    .button-form {
+        margin-bottom: 1.34375em
+    }
+}

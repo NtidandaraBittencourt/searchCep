@@ -1,3 +1,9 @@
-<p>
-  lista-enderecos works!
-</p>
+
+<app-loading *ngIf="carregando" [isLoading]="carregando"></app-loading>
+<div>
+  <app-table
+    [columns]="columns"
+    [data]="enderecos"
+    (onRemove)="removerEndereco($event)"
+  ></app-table>
+</div>

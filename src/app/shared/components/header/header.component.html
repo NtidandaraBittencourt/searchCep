@@ -1,5 +1,5 @@
 <mat-toolbar class="header-home">
-  <img src="assets/one.png" alt="Logo" class="logo" />
+  <img src="assets/logoSccon.svg" alt="Logo" class="logo" />
   <div class="actions-header">
     <button 
       ariaLabel="Página inicial"
@@ -16,8 +16,7 @@
       Endereço
     </button>
 
-    <!-- Definição do menu -->
-    <mat-menu #menu="matMenu">
+    <mat-menu #menu="matMenu" yPosition="below">
       <button mat-menu-item [routerLink]="'/busca-cep'">Buscar Endereço</button>
     </mat-menu>
     

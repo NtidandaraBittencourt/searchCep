@@ -1,45 +1,48 @@
-# SearchCep
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-<!-- Arrumar -->
 # Teste Front-end - SCCON
 
-Este projeto é uma aplicação Angular para busca de CEPs usando a API ViaCEP. Ele segue a estrutura modular, utilizando Lazy Loading e Reactive Forms.
+Este projeto é uma aplicação Angular utilizando a versão 6, com material Angular para busca de CEPs usando a API ViaCEP. Ele segue a estrutura modular, utilizando Lazy Loading e Reactive Forms.
 
 ## Instruções para rodar o projeto
 
-1. Clone o repositório
+1. Clone o repositório: `https://github.com/NtidandaraBittencourt/searchCep`
 2. Instale as dependências: `npm install`
 3. Rode o servidor de desenvolvimento: `ng serve`
+4. Rode o NPM json serve: `json-server --watch db.json --port 3000`
 4. Acesse o projeto em `http://localhost:4200`
 
 ## Principais Funcionalidades
 
 - Busca de CEP com validação e máscara
 - Listagem de endereços pesquisados com opção de exclusão
-- Persistência dos dados no `localStorage`
+- Persistência dos dados no `NPM json serve`
+
+## Principais recursos e desafios
+
+#### Principais recursos
+
+- Componentes: (Onde estão descritos os componentes utilizados nesse teste(busca-cep, lista-endereco, home), reutilizaveis(Header, footer, loading, snack-bar, table))
+
+- Módulos: Modulos que agrupam os componentes, serviços e shared, deixando a gestão e entendimento da applicação mais assertiva e mais fácil de ler.
+
+- Diretivas: ngIf, ngFor e ngClass, pra controle de apresentação de elementos e estilo.
+
+- Serviços e ID: serviços pra requisições, criação de uma classe abstrata pra requisição e gestão das requisições HTTP, e  um service pra controle dos alerts pro usuários.
+
+- Rotas: Configuração do roteamento entre as paginas da aplicação, concentrando em duas rotas, a de HOME e de BUSCA-CEP,, que centraliza os seus respectivos componentes.
+
+- Data Binding: Combinando a logica desenvolvida nos components, com o template html.
+
+- Formulário: Seguindo o solicitado no PDF, foi utilizado o Reactive Form.
+
+- HTTP Client: Pra fazer as requisições pra API
+
+- Lazy Loading: Carregamento de cada modulo separadamente.
+
+
+#### Desafios
+- Estrutura de roteamento, por ser diferente deu um pouco de trabalho;
+- Extrair a logo do PDF
+- Criar uma classe abstrata pra requisições HTTP, entender o conceito e implementação utilizando Observable pra reativida, acabou dando um pouco mais de dificuldade pra entender o conceito e real utilidade
+- As facillidades e modos de utilizar os RxJS, compreender quais as facilidades que ele apresenta ao manipular as eventsEmitters, e a propagação de dados.
+
+####

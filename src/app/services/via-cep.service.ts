@@ -2,17 +2,20 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Endereco } from '../shared/models/endereco.model';
+import { BaseApiService } from './base-api.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ViaCepService {
 
-  private baseUrl = 'https://viacep.com.br/ws';
+export class ViaCepService extends BaseApiService {
+  private readonly apiUrl = 'https://viacep.com.br/ws';
 
-  constructor(private http: HttpClient) {}
+  constructor(http: HttpClient) {
+    super(http, '');
+  }
 
   buscaCep(cep: string): Observable<Endereco> {
-    return this.http.get<Endereco>(`${this.baseUrl}/${cep}/json`);
+    return this.http.get<Endereco>(`${this.apiUrl}/${cep}/json`);
   }
 }

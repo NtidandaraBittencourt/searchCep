@@ -1,3 +1,20 @@
-<p>
-  busca-cep works!
-</p>
+<form [formGroup]="buscaCepForm" (ngSubmit)="buscarCep()" class="form-search">
+  <mat-form-field appearance="fill" style="width: 100%;">
+    <mat-label>Busca por CEP</mat-label>
+    <input matInput formControlName="cep" placeholder="Digite o CEP" mask="00000-000">
+  </mat-form-field>
+
+  <button 
+    ariaLabel="Busca cep"
+    type="submit"
+    mat-raised-button
+    class="button-form"
+  > 
+    Buscar
+  </button>
+</form>
+
+<app-loading *ngIf="!isErroTabela && carregando" [isLoading]="carregando"></app-loading>
+
+
+<app-lista-enderecos></app-lista-enderecos>
