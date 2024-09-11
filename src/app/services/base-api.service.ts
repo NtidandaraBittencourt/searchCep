@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { SnackBarService } from './snack-bar.service';
 
@@ -42,7 +42,7 @@ export abstract class BaseApiService {
     return (error: any): Observable<T> => {
       this.snackService.openSnackBar('Ocorreu um erro. Por favor, tente novamente.', 'error');
       console.error(`${operation} failed: ${error.message}`);
-      return new Observable<T>();
+      return throwError(() => new Error(`${operation} failed: ${error.message}`));
     };
   }
 }

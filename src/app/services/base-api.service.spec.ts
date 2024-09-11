@@ -1,12 +1,30 @@
 import { TestBed } from '@angular/core/testing';
-
-import { BaseApiService } from './base-api.service';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { SnackBarService } from './snack-bar.service';
+import { TestService } from './test.service';
 
 describe('BaseApiService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let service: TestService;
+  let httpMock: HttpTestingController;
+  let snackBarServiceSpy: jasmine.SpyObj<SnackBarService>;
 
-  it('should be created', () => {
-    const service: BaseApiService = TestBed.get(BaseApiService);
-    expect(service).toBeTruthy();
+  beforeEach(() => {
+    snackBarServiceSpy = jasmine.createSpyObj('SnackBarService', ['openSnackBar']);
+
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [
+        TestService,
+        { provide: SnackBarService, useValue: snackBarServiceSpy }
+      ]
+    });
+
+    service = TestBed.get(TestService);
+    httpMock = TestBed.get(HttpTestingController);
   });
+
+  afterEach(() => {
+    httpMock.verify();
+  });
+  
 });

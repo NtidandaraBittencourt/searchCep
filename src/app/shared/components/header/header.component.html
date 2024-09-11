@@ -12,11 +12,12 @@
     <button 
       mat-raised-button
       ariaLabel="Buscar endereço"
-      [matMenuTriggerFor]="menu">
+      [matMenuTriggerFor]="menu"
+      class="button-menu">
       Endereço
     </button>
 
-    <mat-menu #menu="matMenu" yPosition="below">
+    <mat-menu #menu="matMenu" yPosition="below" class="button-submenu">
       <button mat-menu-item [routerLink]="'/busca-cep'">Buscar Endereço</button>
     </mat-menu>
     
