@@ -86,20 +86,20 @@ describe('BuscaCepComponent', () => {
     expect(component.buscaCepForm.valid).toBe(true);
   });
 
-  // it('should set carregando to true at the start and false at the end of the request when form is valid', () => {
-  //   component.buscaCepForm.controls['cep'].setValue('12345678');
-  //   component.buscarCep();
+  it('should set carregando to true at the start and false at the end of the request when form is valid', () => {
+    component.buscaCepForm.controls['cep'].setValue('12345678');
+    component.buscarCep();
 
-  //   expect(component.carregando).toBe(true);
+    expect(component.carregando).toBe(true);
 
-  //   const req = httpMock.expectOne('https://viacep.com.br/ws/12345678/json');
-  //   expect(req.request.method).toBe('GET');
-  //   req.flush(enderecoMock);
+    const req = httpMock.expectOne('https://viacep.com.br/ws/12345678/json');
+    expect(req.request.method).toBe('GET');
+    req.flush(enderecoMock);
 
-  //   fixture.whenStable().then(() => {
-  //     expect(component.carregando).toBe(false);
-  //   });
-  // });
+    fixture.whenStable().then(() => {
+      expect(component.carregando).toBe(false);
+    });
+  });
 
   it('should handle errors correctly', () => {
     spyOn(component, 'hasError').and.callThrough();

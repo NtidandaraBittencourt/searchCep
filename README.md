@@ -5,6 +5,7 @@ Este projeto é uma aplicação Angular utilizando a versão 6, com material Ang
 ## Instruções para rodar o projeto
 
 1. Clone o repositório: `https://github.com/NtidandaraBittencourt/searchCep`
+2. Instalar a versão 16.22.0 do node (Compativel com a versão do Angular v6), utilizei o nvm pra fazer o gerenciamento nvm: https://github.com/coreybutler/nvm-windows
 2. Instale as dependências: `npm install`
 3. Rode o servidor de desenvolvimento: `ng serve`
 4. Rode o NPM json serve: `json-server --watch db.json --port 3000`
@@ -40,6 +41,7 @@ Este projeto é uma aplicação Angular utilizando a versão 6, com material Ang
 
 
 #### Desafios
+- Compatibilidade de pacotes, pacotes de teste desatualizados, atualizar os pacotes se tornou um desafio, pois gerou muitas incompatibilidades.
 - Estrutura de roteamento, por ser diferente deu um pouco de trabalho;
 - Extrair a logo do PDF
 - Criar uma classe abstrata pra requisições HTTP, entender o conceito e implementação utilizando Observable pra reativida, acabou dando um pouco mais de dificuldade pra entender o conceito e real utilidade

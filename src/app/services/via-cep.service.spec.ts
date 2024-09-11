@@ -29,7 +29,15 @@ describe('ViaCepService', () => {
   });
 
   it('should retrieve the address from the API via GET', () => {
-    const mockEndereco: Endereco = { cep: '12345-678', logradouro: 'Rua Teste', ... };
+    const mockEndereco: Endereco = {  id: '1',
+          cep: '12345678',
+          logradouro: 'Rua A',
+          complemento: '',
+          bairro: 'Bairro A',
+          localidade: 'Cidade A',
+          estado: 'Estado A',
+          ddd: '11',
+          uf: 'SP'};
 
     service.buscaCep('12345-678').subscribe((endereco) => {
       expect(endereco).toEqual(mockEndereco);

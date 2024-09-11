@@ -97,5 +97,5 @@ describe('ListaEnderecosComponent', () => {
 
 //   //   expect(component.enderecos.length).toBe(1);
 //   //   expect(snackBarService.openSnackBar).toHaveBeenCalledWith('Não foi possivel excluir o endereço', 'error');
-//   // });
+  });
 });

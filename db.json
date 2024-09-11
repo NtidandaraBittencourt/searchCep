@@ -17,22 +17,6 @@
       "siafi": "8105"
     },
     {
-      "id": "a99c",
-      "cep": "88090-527",
-      "logradouro": "Servidão das Seringueiras",
-      "complemento": "",
-      "unidade": "",
-      "bairro": "Monte Cristo",
-      "localidade": "Florianópolis",
-      "uf": "SC",
-      "estado": "Santa Catarina",
-      "regiao": "Sul",
-      "ibge": "4205407",
-      "gia": "",
-      "ddd": "48",
-      "siafi": "8105"
-    },
-    {
       "id": "56a8",
       "cep": "88132-700",
       "logradouro": "Rua José Cosmo Pamplona",
@@ -65,22 +49,6 @@
       "siafi": "8233"
     },
     {
-      "id": "6480",
-      "cep": "88090-527",
-      "logradouro": "Servidão das Seringueiras",
-      "complemento": "",
-      "unidade": "",
-      "bairro": "Monte Cristo",
-      "localidade": "Florianópolis",
-      "uf": "SC",
-      "estado": "Santa Catarina",
-      "regiao": "Sul",
-      "ibge": "4205407",
-      "gia": "",
-      "ddd": "48",
-      "siafi": "8105"
-    },
-    {
       "id": "32ca",
       "cep": "75132-140",
       "logradouro": "Rua VP 7D",
@@ -95,6 +63,22 @@
       "gia": "",
       "ddd": "62",
       "siafi": "9221"
+    },
+    {
+      "id": "eb75",
+      "cep": "88132-700",
+      "logradouro": "Rua José Cosmo Pamplona",
+      "complemento": "",
+      "unidade": "",
+      "bairro": "Bela Vista",
+      "localidade": "Palhoça",
+      "uf": "SC",
+      "estado": "Santa Catarina",
+      "regiao": "Sul",
+      "ibge": "4211900",
+      "gia": "",
+      "ddd": "48",
+      "siafi": "8233"
     }
   ]
 }
